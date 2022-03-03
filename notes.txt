@@ -1,0 +1,26 @@
+------- 01 drivers ------
+>>> First, import main packages used in selenium:
+from selenium import webdriver // Selenium driver
+from selenium.webdriver.common.keys import Keys // Keyboard access
+
+>>> Create a driver object with the required browser:
+driver = webdriver.Chrome(executable_path="")
+----------------
+
+------ 02 Basic webdriver commands ------
+>>> .get() // Visits a webpage
+>>> .find_element[s]_by() // Get element/s by specific selector
+>>> .click() // Click an element
+>>> .close() // Closes one instance of the browser
+>>> .quit() // Closes all the browsers and the driver
+
+>>> .title // Return the title
+>>> .current_url // Return the URL
+>>> .page_source // Return the HTML
+----------------
+
+
+------ 03 Navigation commands ------
+
+
+----------------
