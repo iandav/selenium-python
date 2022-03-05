@@ -19,8 +19,17 @@ driver = webdriver.Chrome(executable_path="")
 >>> .page_source // Return the HTML
 ----------------
 
-
 ------ 03 Navigation commands ------
+>>> .back() // Go to the previous page
+>>> .forward() // Go to the next page
+----------------
 
+------ 04 Conditional commands ------
+>>> .is_displayed() // Whether the element is visible by the user
+>>> .is_enabled() // Whether the element is enabled
+>>> .is_selected() // Used for Checkboxes and radio buttons
+----------------
+
+------ 05 Implicit & Explicit wait ------
 
 ----------------
