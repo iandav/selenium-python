@@ -2,6 +2,9 @@
 >>> First, import main packages used in selenium:
 from selenium import webdriver // Selenium driver
 from selenium.webdriver.common.keys import Keys // Keyboard access
+from selenium.webdriver.common.by import By // By class used to find elements
+from selenium.webdriver.support.wait import WebDriverWait // WebDriverWait class to use explicit wait
+from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit wait
 
 >>> Create a driver object with the required browser:
 driver = webdriver.Chrome(executable_path="")
@@ -9,8 +12,10 @@ driver = webdriver.Chrome(executable_path="")
 
 ------ 02 Basic webdriver commands ------
 >>> .get() // Visits a webpage
->>> .find_element[s]_by() // Get element/s by specific selector
+>>> .find_element_by() // Get element by specific selector
+>>> .find_element(By. ," ") // Get element by specific selector using By class
 >>> .click() // Click an element
+>>> .maximize_window() // Maximizes the browser window
 >>> .close() // Closes one instance of the browser
 >>> .quit() // Closes all the browsers and the driver
 
@@ -30,6 +35,12 @@ driver = webdriver.Chrome(executable_path="")
 >>> .is_selected() // Used for Checkboxes and radio buttons
 ----------------
 
------- 05 Implicit & Explicit wait ------
-
+------ 05 Implicit & Explicit waits ------
+>>> .implicitly_wait() // Sets a timeout to wait for elements to be found
+                       // If elements are found before x seconds then passes
+                       // If elements aren't found then it throws an exception
+                       // Implicit wait solves synchronitation problem
+>>> wait = WebdriverWait(driver, 10) // Create an object from WebdriverWait class, passing the driver as a parameter and a time.
+                                     // Import webdriver wait + expected conditions as EC
+element = wait.until(EC.x(element))  // Used in particular elements with EC, when the condition is TRUE next actions will be executed
 ----------------
