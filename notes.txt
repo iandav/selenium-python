@@ -44,3 +44,15 @@ driver = webdriver.Chrome(executable_path="")
                                      // Import webdriver wait + expected conditions as EC
 element = wait.until(EC.x(element))  // Used in particular elements with EC, when the condition is TRUE next actions will be executed
 ----------------
+
+------ 06 Input boxes ------
+>>> Total number of input boxes in the webpage: len(elements found)
+>>> Provide input text value: Using .find_element() and .send_keys()
+>>> Check status: Using .is_displayed() or .is_enabled()
+----------------
+
+------ 07 Radio buttons & Check boxes ------
+>>> 1) Verify whether the button is selected or not: Using .is_selected()
+>>> 2) Click on selected button
+----------------
+
