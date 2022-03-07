@@ -4,7 +4,8 @@ from selenium import webdriver // Selenium driver
 from selenium.webdriver.common.keys import Keys // Keyboard access
 from selenium.webdriver.common.by import By // By class used to find elements
 from selenium.webdriver.support.wait import WebDriverWait // WebDriverWait class to use explicit wait
-from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit wait
+from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit 
+from selenium.webdriver.support.ui import Select // Select class to use in dropdowns
 
 >>> Create a driver object with the required browser:
 driver = webdriver.Chrome(executable_path="")
@@ -55,4 +56,18 @@ element = wait.until(EC.x(element))  // Used in particular elements with EC, whe
 >>> 1) Verify whether the button is selected or not: Using .is_selected()
 >>> 2) Click on selected button
 ----------------
+
+------ 08 Dropdown menus ------
+>>> Select an option: Import Select class, create an Select object with the element as argument, finally use methods.
+>>> Total number of options: print(len(selectedElement.options))
+>>> List all options: for i in options: print(i.text)
+----------------
+
+------ 09 Links ------
+>>> Get all the links: Using .find_elements_by_tag_name("a")
+>>> Total number of links: print(len(links))
+>>> List all links: for i in links: print(i.text)
+>>> Click a link: Using .find_element_by_link_text() or .find_element_by_partial_link_text() (specifying substring of the text)
+----------------
+
 
