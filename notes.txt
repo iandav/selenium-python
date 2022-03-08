@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By // By class used to find elements
 from selenium.webdriver.support.wait import WebDriverWait // WebDriverWait class to use explicit wait
 from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit 
 from selenium.webdriver.support.ui import Select // Select class to use in dropdowns
+from selenium.webdriver.common.alert import Alert // Alert class to use in alerts
 
 >>> Create a driver object with the required browser:
 driver = webdriver.Chrome(executable_path="")
@@ -68,6 +69,24 @@ element = wait.until(EC.x(element))  // Used in particular elements with EC, whe
 >>> Total number of links: print(len(links))
 >>> List all links: for i in links: print(i.text)
 >>> Click a link: Using .find_element_by_link_text() or .find_element_by_partial_link_text() (specifying substring of the text)
+----------------
+
+------ 10 Alerts ------
+>>> import alert class and use it with the driver as argument, finally use methods
+>>> Use methods: .accept() or .dismiss()
+----------------
+
+------ 11 Frames ------
+>>> Switch to a particular frame: .switch_to.frame()
+>>> Go back to the main webpage: .switch_to.default_content()
+----------------
+
+------ 12 Browser Windows ------
+>>> Return the value of the current window: .current_window_handle
+>>> Return a list of values of all the current windows: .window_handles
+>>> Switch windows: .switch_to.window()
+>>> Close a window: .close()
+>>> Close all windows: .quit()
 ----------------
 
 
