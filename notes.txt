@@ -7,6 +7,7 @@ from selenium.webdriver.support.wait import WebDriverWait // WebDriverWait class
 from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit 
 from selenium.webdriver.support.ui import Select // Select class to use in dropdowns
 from selenium.webdriver.common.alert import Alert // Alert class to use in alerts
+from selenium.webdriver.common.action_chains import ActionChains // ActionChains class to use in mouse actions
 
 >>> Create a driver object with the required browser:
 driver = webdriver.Chrome(executable_path="")
@@ -88,5 +89,26 @@ element = wait.until(EC.x(element))  // Used in particular elements with EC, whe
 >>> Close a window: .close()
 >>> Close all windows: .quit()
 ----------------
+
+------ 13 Web tables ------
+>>> Print all rows/columns: Using xpath of the rows/columns with len() and using a for loop. Use "+str(x)+" inside xpath
+>>> Use print(, end="   ") to print the results as a table in console
+----------------
+
+------ 14 Scrolling ------
+>>> Scroll by pixel: .execute_script("window.scrollBy(x,y)","")
+>>> Scroll until element found: .execute_script("arguments[0].scrollIntoView();",Element)
+>>> Scroll to end of the page: .execute_script("window.scrollBy(0,document.body.scrollHeight)")
+----------------
+
+------ 15 Mouse actions ------
+>>> Import ActionChains class: from selenium.webdriver.common.action_chains import ActionChains
+>>> Mouse hover: Create an instance of ActionChains(driver), use .move_to_element() and finally .perform()
+>>> Double click: Create an instance of ActionChains(driver), and use .double_click() and finally .perform()
+>>> Right click: Create an instance of ActionChains(driver), and use .context_click() and finally .perform()
+>>> Drag & Drop: Create an instance of ActionChains(driver), and use .drag_and_drop(a,b) and finally .perform()
+----------------
+
+
 
 
