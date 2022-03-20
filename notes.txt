@@ -3,6 +3,7 @@
 from selenium import webdriver // Selenium driver
 from selenium.webdriver.common.keys import Keys // Keyboard access
 from selenium.webdriver.common.by import By // By class used to find elements
+from selenium.webdriver.chrome.options import Options // Options class to change browser options and use them in executable_path
 from selenium.webdriver.support.wait import WebDriverWait // WebDriverWait class to use explicit wait
 from selenium.webdriver.support. import expected_conditions as EC // Expected conditions used with explicit 
 from selenium.webdriver.support.ui import Select // Select class to use in dropdowns
@@ -107,6 +108,33 @@ element = wait.until(EC.x(element))  // Used in particular elements with EC, whe
 >>> Double click: Create an instance of ActionChains(driver), and use .double_click() and finally .perform()
 >>> Right click: Create an instance of ActionChains(driver), and use .context_click() and finally .perform()
 >>> Drag & Drop: Create an instance of ActionChains(driver), and use .drag_and_drop(a,b) and finally .perform()
+----------------
+
+------ 16 Upload files ------
+>>> Get the browse file element and upload the file using .send_keys() with file path as argument
+----------------
+
+------ 17 Data Driven Testing ------
+>>> Install and import openpyxl module using 'pip install openpyxl'
+>>> Read data from Excel: workbook = openpyxl.load_workbook(filePath), sheet = workbook.active and sheet.cell(r,c).value
+>>> Writing data in Excel: sheet.cell(r,c,value)
+----------------
+
+------ 18 Cookies ------
+>>> Capture all cookies: .get_cookies()
+>>> Adding a new cookie: cookie = {} finally driver.add_cookie(cookie)
+>>> Deleting a cookie: .delete_cookie() using the name
+>>> Deleting all cookies: .delete_all_cookies()
+----------------
+
+------ 19 Screenshots ------
+>>> Capture the window: .save_screenshot() or .save_screenshot_as_file()
+----------------
+
+------ 20 Logs ------
+>>> Log levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
+>>> Adding logging: import logging, logging.basicConfig(filename='x.log',format='%(asctime)s: %(levelname)s: %(message)s',level='START LEVEL')
+>>> For real projects create logger object logger = logging.getLogger()
 ----------------
 
 
