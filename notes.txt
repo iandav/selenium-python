@@ -137,6 +137,49 @@ element = wait.until(EC.x(element))  // Used in particular elements with EC, whe
 >>> For real projects create logger object logger = logging.getLogger()
 ----------------
 
+------ 21 Unittest framework ------
+
+----------------
+
+------ 22 Unittest keywords ------
+>>> Executing code before each test cases: setUp(self)
+>>> Executing code after each test cases: tearDown(self)
+>>> Executing code before all test cases: setUpClass(self)
+>>> Executing code after all test cases: tearDownClass(self)
+>>> Executing code before each test module: setUpModule()
+>>> Executing code after each test module: tearDownModule()
+----------------
+
+------ 23 Unittest skipping tests with decorators ------
+>>> Skip test: @unittest.SkipTest
+>>> Skip test with reason: @unittest.skip(reason)
+>>> Skip test with condition: @unittest.skipIf(condition, reason)
+----------------
+
+------ 24 Unittest Assertions ------
+>>> assertEqual(a,b) - If a matches b the unittest will continue the execution.
+>>> assertNotEqual(a,b) - If a doesn't match the unittest will continue the execution.
+
+>>> assertTrue(a) - If the expression is true
+>>> assertFalse(a) - If the expression is false
+
+>>> assertIsNone(a) - If contains None (null) value
+>>> assertIsNotNone(a) - If contains a value different from None (null)
+
+>>> assertIn(a,b) - If a is present in b
+>>> assertNotIn(a,b) - If a isn't present in b
+
+>>> assertGreater(a,b) , assertGreaterEqual(a,b)
+>>> assertLess(a,b) , assertLessEqual(a,b)
+----------------
+
+------ 25 Unittest Create/Execute Test Cases and Test Suites ------
+>>> Import TCases classes to one file, use tc1 = unittest.TestLoader.loadTestsFromTestCase() for each test case class
+>>> Create Test Suite: firstTS = unittest.TestSuite.addTests([tc1,tc2])
+>>> Run Tests: unittest.TextTestRunner.run(TS)
+----------------
+
+
 
 
 
